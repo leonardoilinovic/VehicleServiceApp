@@ -1,0 +1,330 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\leona\\Documents\\FAKS\\vje\u0161tine\\VehicleServiceApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{16A0F257-BA98-4AA6-BD65-E6F024C16CA1}|VehicleServiceApp\\VehicleServiceApp.csproj|c:\\users\\leona\\documents\\faks\\vje\u0161tine\\vehicleserviceapp\\vehicleserviceapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16A0F257-BA98-4AA6-BD65-E6F024C16CA1}|VehicleServiceApp\\VehicleServiceApp.csproj|solutionrelative:vehicleserviceapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16A0F257-BA98-4AA6-BD65-E6F024C16CA1}|VehicleServiceApp\\VehicleServiceApp.csproj|c:\\users\\leona\\documents\\faks\\vje\u0161tine\\vehicleserviceapp\\vehicleserviceapp\\package.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{16A0F257-BA98-4AA6-BD65-E6F024C16CA1}|VehicleServiceApp\\VehicleServiceApp.csproj|solutionrelative:vehicleserviceapp\\package.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16A0F257-BA98-4AA6-BD65-E6F024C16CA1}|VehicleServiceApp\\VehicleServiceApp.csproj|c:\\users\\leona\\documents\\faks\\vje\u0161tine\\vehicleserviceapp\\vehicleserviceapp\\models\\vehicle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16A0F257-BA98-4AA6-BD65-E6F024C16CA1}|VehicleServiceApp\\VehicleServiceApp.csproj|solutionrelative:vehicleserviceapp\\models\\vehicle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16A0F257-BA98-4AA6-BD65-E6F024C16CA1}|VehicleServiceApp\\VehicleServiceApp.csproj|c:\\users\\leona\\documents\\faks\\vje\u0161tine\\vehicleserviceapp\\vehicleserviceapp\\controllers\\servicerecordcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16A0F257-BA98-4AA6-BD65-E6F024C16CA1}|VehicleServiceApp\\VehicleServiceApp.csproj|solutionrelative:vehicleserviceapp\\controllers\\servicerecordcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16A0F257-BA98-4AA6-BD65-E6F024C16CA1}|VehicleServiceApp\\VehicleServiceApp.csproj|c:\\users\\leona\\documents\\faks\\vje\u0161tine\\vehicleserviceapp\\vehicleserviceapp\\models\\servicerecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16A0F257-BA98-4AA6-BD65-E6F024C16CA1}|VehicleServiceApp\\VehicleServiceApp.csproj|solutionrelative:vehicleserviceapp\\models\\servicerecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16A0F257-BA98-4AA6-BD65-E6F024C16CA1}|VehicleServiceApp\\VehicleServiceApp.csproj|c:\\users\\leona\\documents\\faks\\vje\u0161tine\\vehicleserviceapp\\vehicleserviceapp\\migrations\\20250322064249_addserviceenddate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16A0F257-BA98-4AA6-BD65-E6F024C16CA1}|VehicleServiceApp\\VehicleServiceApp.csproj|solutionrelative:vehicleserviceapp\\migrations\\20250322064249_addserviceenddate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16A0F257-BA98-4AA6-BD65-E6F024C16CA1}|VehicleServiceApp\\VehicleServiceApp.csproj|c:\\users\\leona\\documents\\faks\\vje\u0161tine\\vehicleserviceapp\\vehicleserviceapp\\controllers\\clientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16A0F257-BA98-4AA6-BD65-E6F024C16CA1}|VehicleServiceApp\\VehicleServiceApp.csproj|solutionrelative:vehicleserviceapp\\controllers\\clientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16A0F257-BA98-4AA6-BD65-E6F024C16CA1}|VehicleServiceApp\\VehicleServiceApp.csproj|c:\\users\\leona\\documents\\faks\\vje\u0161tine\\vehicleserviceapp\\vehicleserviceapp\\validators\\servicerecordvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16A0F257-BA98-4AA6-BD65-E6F024C16CA1}|VehicleServiceApp\\VehicleServiceApp.csproj|solutionrelative:vehicleserviceapp\\validators\\servicerecordvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16A0F257-BA98-4AA6-BD65-E6F024C16CA1}|VehicleServiceApp\\VehicleServiceApp.csproj|c:\\users\\leona\\documents\\faks\\vje\u0161tine\\vehicleserviceapp\\vehicleserviceapp\\controllers\\servicetaskcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16A0F257-BA98-4AA6-BD65-E6F024C16CA1}|VehicleServiceApp\\VehicleServiceApp.csproj|solutionrelative:vehicleserviceapp\\controllers\\servicetaskcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16A0F257-BA98-4AA6-BD65-E6F024C16CA1}|VehicleServiceApp\\VehicleServiceApp.csproj|c:\\users\\leona\\documents\\faks\\vje\u0161tine\\vehicleserviceapp\\vehicleserviceapp\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16A0F257-BA98-4AA6-BD65-E6F024C16CA1}|VehicleServiceApp\\VehicleServiceApp.csproj|solutionrelative:vehicleserviceapp\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16A0F257-BA98-4AA6-BD65-E6F024C16CA1}|VehicleServiceApp\\VehicleServiceApp.csproj|c:\\users\\leona\\documents\\faks\\vje\u0161tine\\vehicleserviceapp\\vehicleserviceapp\\models\\servicetask.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16A0F257-BA98-4AA6-BD65-E6F024C16CA1}|VehicleServiceApp\\VehicleServiceApp.csproj|solutionrelative:vehicleserviceapp\\models\\servicetask.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16A0F257-BA98-4AA6-BD65-E6F024C16CA1}|VehicleServiceApp\\VehicleServiceApp.csproj|c:\\users\\leona\\documents\\faks\\vje\u0161tine\\vehicleserviceapp\\vehicleserviceapp\\controllers\\vehiclecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16A0F257-BA98-4AA6-BD65-E6F024C16CA1}|VehicleServiceApp\\VehicleServiceApp.csproj|solutionrelative:vehicleserviceapp\\controllers\\vehiclecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16A0F257-BA98-4AA6-BD65-E6F024C16CA1}|VehicleServiceApp\\VehicleServiceApp.csproj|c:\\users\\leona\\documents\\faks\\vje\u0161tine\\vehicleserviceapp\\vehicleserviceapp\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16A0F257-BA98-4AA6-BD65-E6F024C16CA1}|VehicleServiceApp\\VehicleServiceApp.csproj|solutionrelative:vehicleserviceapp\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16A0F257-BA98-4AA6-BD65-E6F024C16CA1}|VehicleServiceApp\\VehicleServiceApp.csproj|c:\\users\\leona\\documents\\faks\\vje\u0161tine\\vehicleserviceapp\\vehicleserviceapp\\models\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16A0F257-BA98-4AA6-BD65-E6F024C16CA1}|VehicleServiceApp\\VehicleServiceApp.csproj|solutionrelative:vehicleserviceapp\\models\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16A0F257-BA98-4AA6-BD65-E6F024C16CA1}|VehicleServiceApp\\VehicleServiceApp.csproj|c:\\users\\leona\\documents\\faks\\vje\u0161tine\\vehicleserviceapp\\vehicleserviceapp\\models\\loginmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16A0F257-BA98-4AA6-BD65-E6F024C16CA1}|VehicleServiceApp\\VehicleServiceApp.csproj|solutionrelative:vehicleserviceapp\\models\\loginmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16A0F257-BA98-4AA6-BD65-E6F024C16CA1}|VehicleServiceApp\\VehicleServiceApp.csproj|c:\\users\\leona\\documents\\faks\\vje\u0161tine\\vehicleserviceapp\\vehicleserviceapp\\models\\registermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16A0F257-BA98-4AA6-BD65-E6F024C16CA1}|VehicleServiceApp\\VehicleServiceApp.csproj|solutionrelative:vehicleserviceapp\\models\\registermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16A0F257-BA98-4AA6-BD65-E6F024C16CA1}|VehicleServiceApp\\VehicleServiceApp.csproj|c:\\users\\leona\\documents\\faks\\vje\u0161tine\\vehicleserviceapp\\vehicleserviceapp\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16A0F257-BA98-4AA6-BD65-E6F024C16CA1}|VehicleServiceApp\\VehicleServiceApp.csproj|solutionrelative:vehicleserviceapp\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16A0F257-BA98-4AA6-BD65-E6F024C16CA1}|VehicleServiceApp\\VehicleServiceApp.csproj|c:\\users\\leona\\documents\\faks\\vje\u0161tine\\vehicleserviceapp\\vehicleserviceapp\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16A0F257-BA98-4AA6-BD65-E6F024C16CA1}|VehicleServiceApp\\VehicleServiceApp.csproj|solutionrelative:vehicleserviceapp\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16A0F257-BA98-4AA6-BD65-E6F024C16CA1}|VehicleServiceApp\\VehicleServiceApp.csproj|c:\\users\\leona\\documents\\faks\\vje\u0161tine\\vehicleserviceapp\\vehicleserviceapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{16A0F257-BA98-4AA6-BD65-E6F024C16CA1}|VehicleServiceApp\\VehicleServiceApp.csproj|solutionrelative:vehicleserviceapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "package.json",
+              "DocumentMoniker": "C:\\Users\\leona\\Documents\\FAKS\\vje\u0161tine\\VehicleServiceApp\\VehicleServiceApp\\package.json",
+              "RelativeDocumentMoniker": "VehicleServiceApp\\package.json",
+              "ToolTip": "C:\\Users\\leona\\Documents\\FAKS\\vje\u0161tine\\VehicleServiceApp\\VehicleServiceApp\\package.json",
+              "RelativeToolTip": "VehicleServiceApp\\package.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-26T19:13:00.641Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "20250322064249_AddServiceEndDate.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\Documents\\FAKS\\vje\u0161tine\\VehicleServiceApp\\VehicleServiceApp\\Migrations\\20250322064249_AddServiceEndDate.cs",
+              "RelativeDocumentMoniker": "VehicleServiceApp\\Migrations\\20250322064249_AddServiceEndDate.cs",
+              "ToolTip": "C:\\Users\\leona\\Documents\\FAKS\\vje\u0161tine\\VehicleServiceApp\\VehicleServiceApp\\Migrations\\20250322064249_AddServiceEndDate.cs",
+              "RelativeToolTip": "VehicleServiceApp\\Migrations\\20250322064249_AddServiceEndDate.cs",
+              "ViewState": "AgIAAD0BAAAAAAAAAAAswEYBAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T07:20:32.038Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ServiceRecordController.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\Documents\\FAKS\\vje\u0161tine\\VehicleServiceApp\\VehicleServiceApp\\Controllers\\ServiceRecordController.cs",
+              "RelativeDocumentMoniker": "VehicleServiceApp\\Controllers\\ServiceRecordController.cs",
+              "ToolTip": "C:\\Users\\leona\\Documents\\FAKS\\vje\u0161tine\\VehicleServiceApp\\VehicleServiceApp\\Controllers\\ServiceRecordController.cs",
+              "RelativeToolTip": "VehicleServiceApp\\Controllers\\ServiceRecordController.cs",
+              "ViewState": "AgIAALMAAAAAAAAAAAAmwNIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T20:00:08.649Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ServiceTaskController.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\Documents\\FAKS\\vje\u0161tine\\VehicleServiceApp\\VehicleServiceApp\\Controllers\\ServiceTaskController.cs",
+              "RelativeDocumentMoniker": "VehicleServiceApp\\Controllers\\ServiceTaskController.cs",
+              "ToolTip": "C:\\Users\\leona\\Documents\\FAKS\\vje\u0161tine\\VehicleServiceApp\\VehicleServiceApp\\Controllers\\ServiceTaskController.cs",
+              "RelativeToolTip": "VehicleServiceApp\\Controllers\\ServiceTaskController.cs",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAgwFQAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T18:27:06.024Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ServiceRecord.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\Documents\\FAKS\\vje\u0161tine\\VehicleServiceApp\\VehicleServiceApp\\Models\\ServiceRecord.cs",
+              "RelativeDocumentMoniker": "VehicleServiceApp\\Models\\ServiceRecord.cs",
+              "ToolTip": "C:\\Users\\leona\\Documents\\FAKS\\vje\u0161tine\\VehicleServiceApp\\VehicleServiceApp\\Models\\ServiceRecord.cs",
+              "RelativeToolTip": "VehicleServiceApp\\Models\\ServiceRecord.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T20:00:57.881Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\Documents\\FAKS\\vje\u0161tine\\VehicleServiceApp\\VehicleServiceApp\\Program.cs",
+              "RelativeDocumentMoniker": "VehicleServiceApp\\Program.cs",
+              "ToolTip": "C:\\Users\\leona\\Documents\\FAKS\\vje\u0161tine\\VehicleServiceApp\\VehicleServiceApp\\Program.cs",
+              "RelativeToolTip": "VehicleServiceApp\\Program.cs",
+              "ViewState": "AgIAAIgAAAAAAAAAAAAUwJsAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T20:18:18.811Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ClientController.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\Documents\\FAKS\\vje\u0161tine\\VehicleServiceApp\\VehicleServiceApp\\Controllers\\ClientController.cs",
+              "RelativeDocumentMoniker": "VehicleServiceApp\\Controllers\\ClientController.cs",
+              "ToolTip": "C:\\Users\\leona\\Documents\\FAKS\\vje\u0161tine\\VehicleServiceApp\\VehicleServiceApp\\Controllers\\ClientController.cs",
+              "RelativeToolTip": "VehicleServiceApp\\Controllers\\ClientController.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAQwDoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T19:59:38.136Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Vehicle.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\Documents\\FAKS\\vje\u0161tine\\VehicleServiceApp\\VehicleServiceApp\\Models\\Vehicle.cs",
+              "RelativeDocumentMoniker": "VehicleServiceApp\\Models\\Vehicle.cs",
+              "ToolTip": "C:\\Users\\leona\\Documents\\FAKS\\vje\u0161tine\\VehicleServiceApp\\VehicleServiceApp\\Models\\Vehicle.cs",
+              "RelativeToolTip": "VehicleServiceApp\\Models\\Vehicle.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T19:56:42.141Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\Documents\\FAKS\\vje\u0161tine\\VehicleServiceApp\\VehicleServiceApp\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "VehicleServiceApp\\Data\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\leona\\Documents\\FAKS\\vje\u0161tine\\VehicleServiceApp\\VehicleServiceApp\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "VehicleServiceApp\\Data\\AppDbContext.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAQwBwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T19:06:45.877Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ServiceRecordValidator.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\Documents\\FAKS\\vje\u0161tine\\VehicleServiceApp\\VehicleServiceApp\\Validators\\ServiceRecordValidator.cs",
+              "RelativeDocumentMoniker": "VehicleServiceApp\\Validators\\ServiceRecordValidator.cs",
+              "ToolTip": "C:\\Users\\leona\\Documents\\FAKS\\vje\u0161tine\\VehicleServiceApp\\VehicleServiceApp\\Validators\\ServiceRecordValidator.cs",
+              "RelativeToolTip": "VehicleServiceApp\\Validators\\ServiceRecordValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-15T21:17:14.993Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ServiceTask.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\Documents\\FAKS\\vje\u0161tine\\VehicleServiceApp\\VehicleServiceApp\\Models\\ServiceTask.cs",
+              "RelativeDocumentMoniker": "VehicleServiceApp\\Models\\ServiceTask.cs",
+              "ToolTip": "C:\\Users\\leona\\Documents\\FAKS\\vje\u0161tine\\VehicleServiceApp\\VehicleServiceApp\\Models\\ServiceTask.cs",
+              "RelativeToolTip": "VehicleServiceApp\\Models\\ServiceTask.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T18:31:02.507Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "VehicleController.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\Documents\\FAKS\\vje\u0161tine\\VehicleServiceApp\\VehicleServiceApp\\Controllers\\VehicleController.cs",
+              "RelativeDocumentMoniker": "VehicleServiceApp\\Controllers\\VehicleController.cs",
+              "ToolTip": "C:\\Users\\leona\\Documents\\FAKS\\vje\u0161tine\\VehicleServiceApp\\VehicleServiceApp\\Controllers\\VehicleController.cs",
+              "RelativeToolTip": "VehicleServiceApp\\Controllers\\VehicleController.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAwCwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T19:59:16.625Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ApplicationUser.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\Documents\\FAKS\\vje\u0161tine\\VehicleServiceApp\\VehicleServiceApp\\Models\\ApplicationUser.cs",
+              "RelativeDocumentMoniker": "VehicleServiceApp\\Models\\ApplicationUser.cs",
+              "ToolTip": "C:\\Users\\leona\\Documents\\FAKS\\vje\u0161tine\\VehicleServiceApp\\VehicleServiceApp\\Models\\ApplicationUser.cs",
+              "RelativeToolTip": "VehicleServiceApp\\Models\\ApplicationUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-15T12:25:09.029Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "LoginModel.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\Documents\\FAKS\\vje\u0161tine\\VehicleServiceApp\\VehicleServiceApp\\Models\\LoginModel.cs",
+              "RelativeDocumentMoniker": "VehicleServiceApp\\Models\\LoginModel.cs",
+              "ToolTip": "C:\\Users\\leona\\Documents\\FAKS\\vje\u0161tine\\VehicleServiceApp\\VehicleServiceApp\\Models\\LoginModel.cs",
+              "RelativeToolTip": "VehicleServiceApp\\Models\\LoginModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-15T12:30:32.712Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Client.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\Documents\\FAKS\\vje\u0161tine\\VehicleServiceApp\\VehicleServiceApp\\Models\\Client.cs",
+              "RelativeDocumentMoniker": "VehicleServiceApp\\Models\\Client.cs",
+              "ToolTip": "C:\\Users\\leona\\Documents\\FAKS\\vje\u0161tine\\VehicleServiceApp\\VehicleServiceApp\\Models\\Client.cs",
+              "RelativeToolTip": "VehicleServiceApp\\Models\\Client.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T20:24:48.488Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "RegisterModel.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\Documents\\FAKS\\vje\u0161tine\\VehicleServiceApp\\VehicleServiceApp\\Models\\RegisterModel.cs",
+              "RelativeDocumentMoniker": "VehicleServiceApp\\Models\\RegisterModel.cs",
+              "ToolTip": "C:\\Users\\leona\\Documents\\FAKS\\vje\u0161tine\\VehicleServiceApp\\VehicleServiceApp\\Models\\RegisterModel.cs",
+              "RelativeToolTip": "VehicleServiceApp\\Models\\RegisterModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-15T12:30:14.287Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\Documents\\FAKS\\vje\u0161tine\\VehicleServiceApp\\VehicleServiceApp\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "VehicleServiceApp\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\leona\\Documents\\FAKS\\vje\u0161tine\\VehicleServiceApp\\VehicleServiceApp\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "VehicleServiceApp\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-15T12:28:39.657Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "TokenService.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\Documents\\FAKS\\vje\u0161tine\\VehicleServiceApp\\VehicleServiceApp\\Services\\TokenService.cs",
+              "RelativeDocumentMoniker": "VehicleServiceApp\\Services\\TokenService.cs",
+              "ToolTip": "C:\\Users\\leona\\Documents\\FAKS\\vje\u0161tine\\VehicleServiceApp\\VehicleServiceApp\\Services\\TokenService.cs",
+              "RelativeToolTip": "VehicleServiceApp\\Services\\TokenService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-16T00:36:21.731Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\leona\\Documents\\FAKS\\vje\u0161tine\\VehicleServiceApp\\VehicleServiceApp\\appsettings.json",
+              "RelativeDocumentMoniker": "VehicleServiceApp\\appsettings.json",
+              "ToolTip": "C:\\Users\\leona\\Documents\\FAKS\\vje\u0161tine\\VehicleServiceApp\\VehicleServiceApp\\appsettings.json",
+              "RelativeToolTip": "VehicleServiceApp\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-12T20:18:22.667Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
