@@ -1,16 +1,42 @@
+# VehicleServiceApp/docker-compose.yml
+version: '3.8'
+
 services:
   backend:
     build:
-      context: .
-      dockerfile: VehicleServiceApp/Dockerfile
+      context: ./VehicleServiceApp # Putanja do tvog .NET projekta
+      dockerfile: Dockerfile
     ports:
-      - "8000:80"
+      - "5001:8080" # Mapira host port 5001 na kontejner port 8080
+    environment:
+      ASPNETCORE_URLS: "http://+:8080"
+      ConnectionStrings__DefaultConnection: "Server=db;Port=5432;Database=vehicleservice;User Id=admin;Password=password;"
+    depends_on:
+      - db
 
+  db:
+    image: postgres:13
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: vehicleservice
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: password
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  # --- Frontend Service ---
   frontend:
     build:
       context: ./frontend
       dockerfile: Dockerfile
     ports:
       - "3000:80"
+    environment:
+      REACT_APP_API_URL: "http://localhost:5001" # Frontend poziva backend na host adresi
     depends_on:
       - backend
+    restart: always
+
+volumes:
+  pgdata:

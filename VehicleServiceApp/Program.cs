@@ -5,21 +5,20 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System;
 using System.Text;
-using System.Text.Json.Serialization; // Dodano za ReferenceHandler
+using System.Text.Json.Serialization;
 using VehicleServiceApp.Data;
 using VehicleServiceApp.Models;
 using FluentValidation;
 using FluentValidation.AspNetCore;
-using VehicleServiceApp.Services; // Dodano za TokenService
-using Microsoft.Extensions.Logging; // Za logiranje
-using System.Text.Json.Serialization;
-
+using VehicleServiceApp.Services;
+using Microsoft.Extensions.Logging;
+using System.Threading.Tasks; // Dodano za Task.CompletedTask
 
 namespace VehicleServiceApp
 {
     public class Program
     {
-        public static void Main(string[] args)
+        public static async Task Main(string[] args) // PROMJENA: Main metoda postaje async Task
         {
             var builder = WebApplication.CreateBuilder(args);
 
@@ -36,22 +35,26 @@ namespace VehicleServiceApp
             builder.Logging.AddConsole();
 
             // 3. Dodaj FluentValidation za validaciju podataka
-            builder.Services.AddValidatorsFromAssemblyContaining<ServiceRecordValidator>();
+            // Važno: Treba dodati FluentValidation services kao MVC filter
+            builder.Services.AddFluentValidationAutoValidation(); // Dodano za automatsku validaciju
+            builder.Services.AddValidatorsFromAssemblyContaining<ServiceRecordValidator>(); // OVO JE ISPRAVNO
 
             // 4. Omogući CORS za frontend aplikaciju
             builder.Services.AddCors(options =>
             {
                 options.AddPolicy("AllowFrontend",
-                    builder => builder.WithOrigins("http://localhost:3000")  // Adresa tvog frontend app-a
-                                      .AllowAnyMethod()
-                                      .AllowAnyHeader());
+                    policy => policy.WithOrigins("http://localhost:3000") // Adresa tvog frontend app-a
+                                    .AllowAnyMethod()
+                                    .AllowAnyHeader()
+                                    .AllowCredentials()); // Dodano AllowCredentials za slanje tokena/cookies, ako ih koristiš
             });
 
             // 5. Konfiguracija JWT autentifikacije (JWT token)
-            var jwtKey = builder.Configuration["Jwt:Key"]; // Preuzmi ključ iz appsettings.json
-
-            // Prebacivanje Base64 ključa u bajtove
-            var keyBytes = Convert.FromBase64String(jwtKey);
+            // Uklonjen je Convert.FromBase64String(jwtKey) jer SymmetricSecurityKey radi s UTF8.GetBytes direktno.
+            // Provjeri da ti je Jwt:Key u appsettings.json string, ne base64 encoded.
+            // Ako je ključ predugačak zbog Base64 encodinga, može biti problem.
+            // Najbolje je da je u appsettings.json ključ samo dugačak string.
+            // Npr. "Jwt:Key": "OvoJeTakoTajnaSifraZaJWTTokeneKojaMoraBitiDugackaNajmanje16Znakova"
 
             builder.Services.AddAuthentication(options =>
             {
@@ -60,7 +63,7 @@ namespace VehicleServiceApp
             })
             .AddJwtBearer(options =>
             {
-                options.RequireHttpsMetadata = false;  // Za razvojnu verziju
+                options.RequireHttpsMetadata = false; // Za razvojnu verziju - ok
                 options.SaveToken = true;
                 options.TokenValidationParameters = new TokenValidationParameters
                 {
@@ -93,7 +96,7 @@ namespace VehicleServiceApp
             builder.Services.AddAuthorization();
 
             // 7. Dodaj TokenService za generiranje JWT tokena
-            builder.Services.AddSingleton<TokenService>();  // Dodano za TokenService
+            builder.Services.AddSingleton<TokenService>(); // Dodano za TokenService
 
             // 8. Dodaj kontrolere i JSON opcije
             builder.Services.AddControllers()
@@ -102,7 +105,6 @@ namespace VehicleServiceApp
                     x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
                     x.JsonSerializerOptions.DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull;
                 });
-
 
             // 9. Konfiguracija Swagger-a za testiranje API-ja i JWT autentifikaciju
             builder.Services.AddEndpointsApiExplorer();
@@ -131,6 +133,39 @@ namespace VehicleServiceApp
 
             var app = builder.Build();
 
+            // ************************************************************************************************
+            // ***** KLJUČNA PROMJENA: AUTOMATSKA PRIMJENA MIGRACIJA (Prebačeno OVDJE, PRIJE app.Run()) *****
+            // ************************************************************************************************
+            // Ovo osigurava da se migracije pokušaju primijeniti ODMAH nakon što se app izgradi,
+            // ali PRIJE nego što aplikacija počne prihvaćati HTTP zahtjeve.
+            // To omogućuje bazi podataka da se inicijalizira prije nego što se pokušaju obraditi prvi zahtjevi (npr. registracija).
+            using (var scope = app.Services.CreateScope())
+            {
+                var services = scope.ServiceProvider;
+                try
+                {
+                    var context = services.GetRequiredService<AppDbContext>();
+                    // Provjeravamo je li baza podataka već u redu, a ako nije, čekamo kratko i pokušavamo ponovno.
+                    // Ovo je korisno jer db kontejner možda nije odmah potpuno spreman.
+                    // Npgsql.NpgsqlException (0x80004005): Failed to connect ... Connection refused
+                    // Ovo je greška koju smo dobili, a događa se kada backend pokuša pristupiti bazi,
+                    // ali db kontejner još nije spreman.
+                    await Task.Delay(5000); // Čekaj 5 sekundi prije prve migracije
+                    context.Database.Migrate();
+                    Console.WriteLine("Database migrations applied successfully."); // Dodao sam Console.WriteLine
+                }
+                catch (Exception ex)
+                {
+                    var logger = services.GetRequiredService<ILogger<Program>>();
+                    logger.LogError(ex, "An error occurred while migrating the database.");
+                    // Razmisli o tome da li želiš da se aplikacija zaustavi ovdje,
+                    // ili da nastavi s radom s greškom migracije. Za Docker, često se želi zaustaviti.
+                    // throw; // Ako želiš da se aplikacija sruši ako migracije ne uspiju
+                }
+            }
+            // ************************************************************************************************
+
+
             // 10. Omogući Swagger UI za razvojni okoliš
             if (app.Environment.IsDevelopment())
             {
@@ -140,11 +175,12 @@ namespace VehicleServiceApp
 
             // 11. Konfiguracija HTTP request pipeline-a
             // Postavi CORS prije Authentication i Authorization middleware-a
+            app.UseRouting(); // Dodano UseRouting explicitno ovdje jer je dobra praksa
             app.UseCors("AllowFrontend"); // Omogući CORS za našu domenu
 
-            app.UseHttpsRedirection();  // Omogući HTTPS redirekciju
-            app.UseAuthentication();  // Omogućava autentifikaciju
-            app.UseAuthorization();  // Omogućava autorizaciju
+            app.UseHttpsRedirection(); // Omogući HTTPS redirekciju (može se zakomentirati ako ne koristiš HTTPS)
+            app.UseAuthentication(); // Omogućava autentifikaciju (MORA BITI PRIJE UseAuthorization)
+            app.UseAuthorization(); // Omogućava autorizaciju (MORA BITI POSLIJE UseAuthentication)
 
             // 12. Mapiranje API ruta (kontroleri)
             app.MapControllers();
