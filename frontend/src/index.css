@@ -1,0 +1,36 @@
+/* Resetiranje defaultnih margina i paddinga */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+/* Tailwind CSS direktive */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Ostali stilovi */
+form {
+  margin: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  width: 300px;
+}
+
+input, select, button {
+  margin-bottom: 10px;
+  padding: 5px;
+  width: 100%;
+}
+
+span {
+  color: red;
+  font-size: 12px;
+}
+
+.fc-daygrid-day.bg-blue-200 {
+  background-color: #bfdbfe !important;
+}
