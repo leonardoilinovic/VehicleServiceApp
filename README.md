@@ -1,164 +1,157 @@
-# Vehicle Service Management Application
+# Sustav za Upravljanje Servisom Vozila (Vehicle Service Management System)
 
-Ovaj projekt implementira aplikaciju za evidenciju servisa vozila, klijenata, vozila i servisnih zadataka. Sastoji se od .NET 8 Web API backenda i React TypeScript frontenda.
+Ovo je web aplikacija razvijena za upravljanje servisima vozila, klijentima i vozilima. Uključuje funkcionalnosti za autentifikaciju (registraciju i prijavu), dodavanje klijenata i vozila, te zakazivanje i pregled servisnih zapisa putem interaktivnog kalendara.
 
-## Sadržaj
+## Tehnologije Korištene
 
-- [Karakteristike](#karakteristike)
-- [Tehnologije](#tehnologije)
-- [Preduvjeti](#preduvjeti)
-- [Postavljanje i pokretanje projekta](#postavljanje-i-pokretanje-projekta)
-  - [1. Backend konfiguracija](#1-backend-konfiguracija)
-  - [2. Baza podataka (PostgreSQL)](#2-baza-podataka-postgresql)
-  - [3. Frontend konfiguracija](#3-frontend-konfiguracija)
-  - [4. Pokretanje aplikacija](#4-pokretanje-aplikacija)
-- [API Endpoints](#api-endpoints)
-- [Korištenje aplikacije](#korištenje-aplikacije)
-
-## Karakteristike
-
--   **Autentifikacija i Autorizacija:** Korisnici se mogu registrirati i prijaviti.
--   **Upravljanje Klijentima:** Dodavanje, pregled, uređivanje i brisanje podataka o klijentima.
--   **Upravljanje Vozilima:** Dodavanje, pregled, uređivanje i brisanje podataka o vozilima (jedan klijent može imati više vozila).
--   **Upravljanje Servisnim Zadacima:** Dodavanje, pregled, uređivanje i brisanje pojedinih servisnih zadataka (npr. "Promjena ulja", "Provjera kočnica").
--   **Upravljanje Servisnim Zapisima:** Dodavanje, pregled, uređivanje i brisanje zapisa o obavljenim servisima (jedan servis može imati više servisnih zadataka, a jedan zadatak može biti u više servisa - Many-to-Many relacija).
-
-## Tehnologije
-
-### Backend (.NET 8)
-
--   **ASP.NET Core 8:** Web API
--   **Entity Framework Core:** ORM za rad s bazom podataka
--   **Npgsql:** PostgreSQL provider za EF Core
--   **ASP.NET Core Identity:** Za autentifikaciju i autorizaciju (JWT Bearer tokeni)
--   **FluentValidation:** Za validaciju ulaznih podataka
--   **Minimal APIs:** Za definiranje API endpointa (umjesto kontrolera)
--   **Swagger/OpenAPI:** Za dokumentaciju i testiranje API-ja
-
-### Frontend (React)
-
--   **React 18+**
--   **TypeScript**
--   **Tailwind CSS:** Za stiliziranje
--   **Fluent UI:** Za UI komponente (v8 ili v9)
--   **React Query (TanStack Query):** Za dohvaćanje i upravljanje podacima s API-ja
--   **React Hook Form:** Za rad s formama
--   **React Router DOM:** Za navigaciju
+* **Frontend:** React, TypeScript, Axios, React Hook Form, React Query, FullCalendar, React Toastify, Framer Motion, Tailwind CSS
+* **Backend:** ASP.NET Core Web API (C#)
+* **Baza Podataka:** PostgreSQL
+* **Kontejnerizacija:** Docker, Docker Compose
 
 ## Preduvjeti
 
-Prije pokretanja projekta, pobrinite se da imate instalirano sljedeće:
+Da biste pokrenuli ovaj projekt, trebat će vam sljedeće instalirano na vašem računalu:
 
--   [.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0)
--   [Node.js](https://nodejs.org/en/download/) (preporučuje se LTS verzija)
--   [npm](https://www.npmjs.com/get-npm) (obično dolazi s Node.js)
--   [PostgreSQL Database Server](https://www.postgresql.org/download/)
--   Code Editor (preporučuje se [Visual Studio 2022](https://visualstudio.microsoft.com/vs/) za backend i [Visual Studio Code](https://code.visualstudio.com/) za frontend)
--   [Git](https://git-scm.com/downloads)
-
-## Postavljanje i pokretanje projekta
-
-Slijedite ove korake za postavljanje i pokretanje aplikacije:
-
-### 1. Backend konfiguracija
-
-1.  **Klonirajte repozitorij:**
-    ```bash
-    git clone [https://github.com/tvoje-korisnicko-ime/VehicleServiceApp.git](https://github.com/tvoje-korisnicko-ime/VehicleServiceApp.git)
-    cd VehicleServiceApp
-    ```
-2.  **Navigirajte do backend foldera:**
-    ```bash
-    cd backend # ili kako ti se zove folder, npr. VehicleServiceApp.API
-    ```
-3.  **Postavite korisničke tajne (User Secrets):**
-    Ovaj projekt koristi ASP.NET Core User Secrets za pohranu osjetljivih podataka kao što su Connection String baze podataka i JWT ključ. Ove tajne se **ne guraju na GitHub**.
-    * Desni klik na `.NET` projekt u Visual Studiju -> `Manage User Secrets`.
-    * U otvorenu `secrets.json` datoteku dodajte (ili modificirajte) sljedeće:
-        ```json
-        {
-          "ConnectionStrings": {
-            "DefaultConnection": "Host=localhost;Port=5432;Database=VehicleServiceDb;Username=your_postgres_username;Password=your_postgres_password"
-          },
-          "Jwt": {
-            "Key": "YourSuperSecretJwtKeyThatIsAtLeast32BytesLongForHS256Encryption", // Zamijeni ovo s dugim, nasumičnim stringom
-            "Issuer": "VehicleServiceApp",
-            "Audience": "VehicleServiceAppUsers"
-          }
-        }
+1.  **Docker Desktop** (ili Docker Engine):
+    * Preuzmite i instalirajte s [Docker web stranice](https://www.docker.com/products/docker-desktop/).
+    * Provjerite radi li Docker tako da otvorite terminal/Command Prompt i upišete:
+        ```bash
+        docker --version
+        docker compose version
         ```
-    * **Važno:** Zamijenite `your_postgres_username`, `your_postgres_password` i `YourSuperSecretJwtKey...` s vašim stvarnim podacima.
-4.  **Izgradite projekt:**
-    ```bash
-    dotnet build
-    ```
+        Trebali biste vidjeti brojeve verzija.
+2.  **(Opcionalno za lokalni frontend/backend razvoj, ali preporučeno):**
+    * **Node.js i npm:** Za pokretanje React frontenda lokalno. Preuzmite s [Node.js web stranice](https://nodejs.org/en/download/). Provjerite s `node -v` i `npm -v`.
+    * **.NET SDK:** Za pokretanje ASP.NET Core backenda lokalno. Preuzmite s [Microsoft .NET web stranice](https://dotnet.microsoft.com/download). Provjerite s `dotnet --version`.
 
-### 2. Baza podataka (PostgreSQL)
+## Struktura Projekta
 
-1.  **Instalirajte PostgreSQL:** Ako već nemate, instalirajte PostgreSQL server.
-2.  **Kreirajte bazu podataka:** Otvorite `pgAdmin` ili koristite `psql` i kreirajte novu bazu podataka s imenom koje ste definirali u `secrets.json` (npr. `VehicleServiceDb`).
-3.  **Primijenite Entity Framework Core migracije:**
-    Navigirajte do backend foldera (ako niste već):
-    ```bash
-    cd backend
-    ```
-    Pokrenite migracije kako biste kreirali tablice u bazi podataka:
-    ```bash
-    dotnet ef database update
-    ```
-    Ovo će stvoriti sve potrebne tablice (`AspNetUsers`, `AspNetRoles`, `Clients`, `Vehicles`, `ServiceRecords`, `ServiceTasks`, `ServiceRecordServiceTask` (za many-to-many relaciju)).
+Projekt je organiziran u sljedeće glavne mape:
 
-### 3. Frontend konfiguracija
-
-1.  **Navigirajte do frontend foldera:**
-    ```bash
-    cd ../frontend # (ili kako ti se zove frontend folder)
-    ```
-2.  **Instalirajte Node.js pakete:**
-    ```bash
-    npm install
-    ```
-3.  **Kreirajte `.env` datoteku (ako je potrebno):**
-    Ako tvoja React aplikacija koristi okolinske varijable (npr. za URL API-ja), kreiraj datoteku pod nazivom `.env` u rootu frontend foldera i dodaj:
-    ```
-    REACT_APP_API_URL=http://localhost:5001
-    ```
-    (Zamijeni port ako je tvoj backend na drugom portu). Ovu datoteku `.env` dodaj u `.gitignore` ako već nisi.
-
-### 4. Pokretanje aplikacija
-
-1.  **Pokrenite Backend API:**
-    Iz root direktorija backend projekta:
-    ```bash
-    dotnet run
-    ```
-    Ovo će pokrenuti backend na `http://localhost:5001` (ili sličnom portu). API dokumentacija (Swagger UI) bit će dostupna na `http://localhost:5001/swagger`.
-
-2.  **Pokrenite Frontend aplikaciju:**
-    Otvorite **novi terminal** i navigirajte do root direktorija frontend projekta:
-    ```bash
-    cd frontend
-    npm start
-    ```
-    Ovo će pokrenuti React development server na `http://localhost:3000`. Aplikacija bi se trebala automatski otvoriti u vašem zadanom web pregledniku.
-
-## API Endpoints
-
-Možete istražiti sve dostupne API endpointe putem Swagger UI-ja na `http://localhost:5001/swagger` kada je backend pokrenut.
-
-## Korištenje aplikacije
-
-1.  Nakon pokretanja frontenda, bit ćete preusmjereni na stranicu za prijavu/registraciju (`/auth`).
-2.  **Registrirajte se** kao novi korisnik.
-3.  **Prijavite se** s novokreiranim podacima.
-4.  Nakon prijave, moći ćete koristiti kartice na početnoj stranici za dodavanje i upravljanje klijentima, vozilima, servisnim zadacima i servisima.
+* `VehicleServiceApp/`: Sadrži ASP.NET Core backend API projekt.
+* `frontend/`: Sadrži React frontend aplikaciju.
+* `docker-compose.yml`: Konfiguracijska datoteka za Docker Compose koja definira kako pokrenuti sve servise (backend, bazu podataka, frontend) zajedno.
 
 ---
 
-### **Važne napomene:**
+## 🚀 Pokretanje Aplikacije s Docker Compose (Preporučeno za Brzo Postavljanje)
 
-* **Autentifikacija/Autorizacija:** Objasni u uputama da je za pristup većini funkcionalnosti potrebna prijava.
-* **Debugiranje:** Spomeni da mogu koristiti Visual Studio za debugiranje backenda i preglednikove DevTools za debugiranje frontenda.
-* **Problemi s portovima:** Upozori ih ako koriste neki drugi softver koji možda zauzima portove 3000 ili 5001.
+Ovo je najjednostavniji način za pokretanje cijele aplikacije, jer ne zahtijeva zasebnu instalaciju .NET-a, Node.js-a ili PostgreSQL-a na vašem sustavu.
 
-S ovim detaljnim uputama, svatko bi trebao moći klonirati, postaviti i pokrenuti tvoj projekt bez većih problema! Sretno!
+1.  **Klonirajte ili preuzmite projekt:**
+    Ako još niste, preuzmite cijeli projekt na svoje računalo. Ako koristite Git:
+    ```bash
+    git clone <URL_vašeg_GitHub_repozitorija>
+    cd NazivVašegProjektnogFoldera
+    ```
+    (Zamijenite `<URL_vašeg_GitHub_repozitorija>` sa stvarnim URL-om vašeg repozitorija na GitHubu).
+
+2.  **Navigirajte do korijena projekta:**
+    Otvorite terminal (Command Prompt na Windows, Terminal na macOS/Linux) i navigirajte do glavnog foldera projekta (onog koji sadrži `VehicleServiceApp`, `frontend` i `docker-compose.yml`).
+    ```bash
+    cd /putanja/do/NazivVašegProjektnogFoldera
+    ```
+
+3.  **Pokrenite servise:**
+    Iz korijena projekta, izvršite sljedeću naredbu:
+    ```bash
+    docker-compose up --build -d
+    ```
+    * `up`: Pokreće sve servise definirane u `docker-compose.yml`.
+    * `--build`: Osigurava da se Docker slike izgrade iz vašeg koda (backend i frontend) prije pokretanja. Ovo je važno kada prvi put pokrećete ili kada ste napravili promjene u kodu.
+    * `-d`: Pokreće kontejnere u "detached" načinu (u pozadini), tako da možete nastaviti koristiti terminal.
+
+    Ovo će potrajati nekoliko minuta dok se preuzmu potrebne Docker slike (PostgreSQL), izgrade vaše aplikacije i pokrenu svi servisi. Pratite ispis u terminalu.
+
+4.  **Pristup aplikaciji:**
+    Nakon što su svi servisi uspješno pokrenuti, aplikacija će biti dostupna u vašem web pregledniku na adresi:
+    [http://localhost:3000](http://localhost:3000)
+
+5.  **Perzistencija Podataka (Važno!)**
+    Aplikacija koristi PostgreSQL bazu podataka koja se pokreće unutar Dockera. Podaci baze pohranjuju se u Docker "volumenu" nazvanom `pgdata`.
+
+    * **Zaustavljanje aplikacije bez brisanja podataka:**
+        Ako želite zaustaviti kontejnere, ali zadržati sve podatke koje ste unijeli (registracije, klijenti, vozila), koristite:
+        ```bash
+        docker-compose down
+        ```
+        Sljedeći put kada pokrenete `docker-compose up -d`, baza podataka će biti u istom stanju u kojem ste je ostavili.
+
+    * **Potpuno brisanje i resetiranje aplikacije (uključujući podatke):**
+        Ako želite potpuno resetirati aplikaciju na "svježe" stanje (uključujući brisanje svih podataka iz baze), zaustavite kontejnere i obrišite volumene pomoću:
+        ```bash
+        docker-compose down -v
+        ```
+        Sljedeći put kada pokrenete `docker-compose up --build -d`, pokrenut će se s praznom bazom podataka.
+
+---
+
+## 💻 Pokretanje Aplikacije Lokalno (Za Razvoj)
+
+Ova metoda zahtijeva da imate Node.js, npm i .NET SDK instalirane na vašem računalu. Baza podataka će i dalje raditi u Dockeru.
+
+1.  **Pokrenite PostgreSQL bazu podataka u Dockeru:**
+    Otvorite terminal u korijenu projekta i pokrenite samo `db` servis:
+    ```bash
+    docker-compose up db -d
+    ```
+    Ovo će pokrenuti samo PostgreSQL bazu podataka.
+
+2.  **Pokrenite Backend (ASP.NET Core API):**
+    * Otvorite **novi terminal** (držite onaj za Docker otvoren).
+    * Navigirajte do backend foldera:
+        ```bash
+        cd VehicleServiceApp
+        ```
+    * Pokrenite backend API:
+        ```bash
+        dotnet run
+        ```
+        Backend će se pokrenuti, vjerojatno na `http://localhost:5026` (provjerite ispis u terminalu).
+
+3.  **Pokrenite Frontend (React App):**
+    * Otvorite **još jedan novi terminal** (držite prethodna dva otvorena).
+    * Navigirajte do frontend foldera:
+        ```bash
+        cd frontend
+        ```
+    * **Instalirajte ovisnosti (samo prvi put):**
+        ```bash
+        npm install
+        ```
+    * **Provjerite `.env` konfiguraciju:**
+        Provjerite da u `frontend/.env` datoteci imate sljedeću liniju:
+        ```
+        REACT_APP_API_URL=http://localhost:5026
+        ```
+        (Ako vaš backend radi na drugom portu, prilagodite ovu vrijednost.)
+
+    * **Pokrenite frontend aplikaciju:**
+        ```bash
+        npm start
+        ```
+        Ovo će pokrenuti razvojni server i automatski otvoriti aplikaciju u vašem pregledniku na adresi:
+        [http://localhost:3000](http://localhost:3000)
+
+4.  **Zaustavljanje lokalnog razvoja:**
+    * U svakom terminalu gdje se nešto pokreće (backend, frontend), pritisnite `Ctrl + C` da zaustavite proces.
+    * Kada završite, možete zaustaviti i Docker kontejner za bazu podataka:
+        ```bash
+        cd /putanja/do/NazivVašegProjektnogFoldera
+        docker-compose down db
+        ```
+        (Ponovno, ne koristite `-v` ako želite zadržati podatke u bazi.)
+
+---
+
+## Česta Pitanja (FAQ)
+
+* **Zašto dobivam "401 Unauthorized" grešku nakon prijave?**
+    Ovo se obično događa ako token za autentifikaciju nije ispravno spremljen ili poslan s naknadnim zahtjevima. Provjerite da je `REACT_APP_API_URL` ispravno konfiguriran i da vaša aplikacija ispravno rukuje tokenima u `localStorage`.
+* **Zašto se moji podaci iz baze gube svaki put kada pokrenem Docker Compose?**
+    Vjerojatno koristite `docker-compose down -v` što briše Docker volumene (gdje se podaci baze pohranjuju). Koristite samo `docker-compose down` da biste zadržali podatke.
+* **Aplikacija ne radi, a u konzoli preglednika vidim "CORS error"?**
+    To znači da vaš backend (ASP.NET Core) ne dopušta zahtjeve s domene na kojoj se frontend nalazi. Provjerite CORS konfiguraciju u vašem ASP.NET Core startup kodu da dopušta `http://localhost:3000`. (U ovom projektu bi to trebalo biti već konfigurirano, ali ako naiđete na problem, ovo je čest uzrok.)
+
+---
