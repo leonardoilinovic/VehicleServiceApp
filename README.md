@@ -2,6 +2,26 @@
 
 Ovo je web aplikacija razvijena za upravljanje servisima vozila, klijentima i vozilima. Uključuje funkcionalnosti za autentifikaciju (registraciju i prijavu), dodavanje klijenata i vozila, te zakazivanje i pregled servisnih zapisa putem interaktivnog kalendara.
 
+## Sadržaj
+
+* [Tehnologije Korištene](#tehnologije-korištene)
+* [Preduvjeti](#preduvjeti)
+* [Struktura Projekta](#struktura-projekta)
+* [🚀 Pokretanje Aplikacije s Docker Compose (Preporučeno za Brzo Postavljanje)](#-pokretanje-aplikacije-s-docker-compose-preporučeno-za-brzo-postavljanje)
+* [💻 Pokretanje Aplikacije Lokalno (Za Razvoj)](#-pokretanje-aplikacije-lokalno-za-razvoj)
+* [🌟 Korištenje Aplikacije - Detaljne Upute](#-korištenje-aplikacije---detaljne-upute)
+    * [1. Registracija i Prijava](#1-registracija-i-prijava)
+    * [2. Početna Stranica (Dashboard)](#2-početna-stranica-dashboard)
+    * [3. Upravljanje Servisnim Zadatcima (Taskovima)](#3-upravljanje-servisnim-zadatcima-taskovima)
+    * [4. Kreiranje Novog Servisa](#4-kreiranje-novog-servisa)
+    * [5. Pregled Kalendara Servisa](#5-pregled-kalendara-servisa)
+    * [6. Upravljanje Vozilima](#6-upravljanje-vozilima)
+    * [7. Upravljanje Klijentima](#7-upravljanje-klijentima)
+    * [8. Pregled Svih Servisa](#8-pregled-svih-servisa)
+* [Česta Pitanja (FAQ)](#česta-pitanja-faq)
+
+---
+
 ## Tehnologije Korištene
 
 * **Frontend:** React, TypeScript, Axios, React Hook Form, React Query, FullCalendar, React Toastify, Framer Motion, Tailwind CSS
