@@ -13,7 +13,14 @@ Ovo je web aplikacija razvijena za upravljanje servisima vozila, klijentima i vo
 
 Da biste pokrenuli ovaj projekt, trebat će vam sljedeće instalirano na vašem računalu:
 
-1.  **Docker Desktop** (ili Docker Engine):
+1.  **Git:**
+    * Preuzmite i instalirajte s [Git web stranice](https://git-scm.com/downloads).
+    * Provjerite radi li Git tako da otvorite terminal/Command Prompt i upišete:
+        ```bash
+        git --version
+        ```
+        Trebali biste vidjeti broj verzije.
+2.  **Docker Desktop** (ili Docker Engine):
     * Preuzmite i instalirajte s [Docker web stranice](https://www.docker.com/products/docker-desktop/).
     * Provjerite radi li Docker tako da otvorite terminal/Command Prompt i upišete:
         ```bash
@@ -21,7 +28,7 @@ Da biste pokrenuli ovaj projekt, trebat će vam sljedeće instalirano na vašem 
         docker compose version
         ```
         Trebali biste vidjeti brojeve verzija.
-2.  **(Opcionalno za lokalni frontend/backend razvoj, ali preporučeno):**
+3.  **(Opcionalno za lokalni frontend/backend razvoj, ali preporučeno):**
     * **Node.js i npm:** Za pokretanje React frontenda lokalno. Preuzmite s [Node.js web stranice](https://nodejs.org/en/download/). Provjerite s `node -v` i `npm -v`.
     * **.NET SDK:** Za pokretanje ASP.NET Core backenda lokalno. Preuzmite s [Microsoft .NET web stranice](https://dotnet.microsoft.com/download). Provjerite s `dotnet --version`.
 
@@ -120,8 +127,10 @@ Ova metoda zahtijeva da imate Node.js, npm i .NET SDK instalirane na vašem rač
         ```bash
         npm install
         ```
-    * **Provjerite `.env` konfiguraciju:**
-        Provjerite da u `frontend/.env` datoteci imate sljedeću liniju:
+    * **Konfigurirajte varijable okruženja:**
+        Kreirajte datoteku naziva `.env` u folderu `frontend/`.
+        Kopirajte sadržaj iz `frontend/.env.example` u nju.
+        Osigurajte da imate sljedeću liniju u vašoj novoj `.env` datoteci:
         ```
         REACT_APP_API_URL=http://localhost:5026
         ```
@@ -153,5 +162,3 @@ Ova metoda zahtijeva da imate Node.js, npm i .NET SDK instalirane na vašem rač
     Vjerojatno koristite `docker-compose down -v` što briše Docker volumene (gdje se podaci baze pohranjuju). Koristite samo `docker-compose down` da biste zadržali podatke.
 * **Aplikacija ne radi, a u konzoli preglednika vidim "CORS error"?**
     To znači da vaš backend (ASP.NET Core) ne dopušta zahtjeve s domene na kojoj se frontend nalazi. Provjerite CORS konfiguraciju u vašem ASP.NET Core startup kodu da dopušta `http://localhost:3000`. (U ovom projektu bi to trebalo biti već konfigurirano, ali ako naiđete na problem, ovo je čest uzrok.)
-
----
