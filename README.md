@@ -261,7 +261,7 @@ Pregledajte, uredite ili izbrišite klijente.
 
 * **Pristup listi klijenata:**
     Kliknite na karticu "Klijenti" na početnoj stranici.
-    ![Klik na karticu Klijenti](images/klijent_na_klijente.png)
+    ![Klik na karticu Klijenti](images/klik_na_klijente.png)
 
 * **Detalji klijenta i opcije:**
     Na stranici s detaljima klijenta možete pregledati njegove podatke te imate opciju uređivanja ili brisanja klijenta.
