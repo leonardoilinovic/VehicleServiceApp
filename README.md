@@ -168,10 +168,15 @@ Nakon pokretanja aplikacije, prva stranica koju ćete vidjeti je stranica za reg
 
 * **Prijava postojećeg korisnika:**
     Nakon uspješne registracije, automatski ćete biti preusmjereni na stranicu za prijavu. Također, možete se prijaviti s već postojećim računom. Koristite svoj email i lozinku koju ste kreirali.
+    ![Stranica za prijavu](images/login.png)
 
 ### 2. Početna Stranica (Dashboard)
 
 Nakon uspješne prijave, bit ćete preusmjereni na početnu stranicu aplikacije. Ovdje se nalazi centralni navigacijski sustav s karticama za brzi pristup ključnim funkcionalnostima kao što su Novi Servis, Kalendar Servisa, Vozila, Klijenti, Servisni Zadatci i Svi Servisi. Iste funkcionalnosti su dostupne i putem navigacijske trake (navbar) na vrhu stranice.
+
+* **Povratak na početnu stranicu putem loga:**
+    U bilo kojem trenutku možete se vratiti na početnu stranicu klikom na logo aplikacije u gornjem lijevom kutu navigacijske trake.
+    ![Logo za povratak na početnu stranicu](images/klik_za_home.png)
 
 ![Početna stranica aplikacije](images/home_page.png)
 
@@ -252,7 +257,7 @@ Ova sekcija prikazuje sve kreirane servisne zapise u obliku liste.
     ![Klik na karticu Svi Servisi](images/klik_na_servise.png)
 
 * **Pregled i upravljanje servisima:**
-    Ovdje možete vidjeti sve servisne zapise, koji su automobili povezani s kojim servisom, te njihove zakazane termine. Također imate opciju brisanja pojedinog servisnog zapisa.
+    Ovdje možete vidjeti sve servisne zapise, koja su vozila povezana s kojim servisom, te njihove zakazane termine. Također imate opciju brisanja pojedinog servisnog zapisa.
     ![Lista svih servisa](images/servisi.png)
 
 ---
