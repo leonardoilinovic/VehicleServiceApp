@@ -49,10 +49,10 @@ Ovo je najjednostavniji način za pokretanje cijele aplikacije, jer ne zahtijeva
 1.  **Klonirajte ili preuzmite projekt:**
     Ako još niste, preuzmite cijeli projekt na svoje računalo. Ako koristite Git:
     ```bash
-    git clone <URL_vašeg_GitHub_repozitorija>
+    git clone <URL_GitHub_repozitorija>
     cd VehicleServiceApp
     ```
-    (Zamijenite `<URL_vašeg_GitHub_repozitorija>` sa stvarnim URL-om vašeg repozitorija na GitHubu).
+    (Zamijenite `<URL_GitHub_repozitorija>` sa stvarnim URL-om repozitorija na GitHubu).
 
 2.  **Navigirajte do korijena projekta:**
     Otvorite terminal (Command Prompt na Windows, Terminal na macOS/Linux) i navigirajte do glavnog foldera projekta (onog koji sadrži `VehicleServiceApp`, `frontend` i `docker-compose.yml`).
