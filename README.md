@@ -168,7 +168,6 @@ Nakon pokretanja aplikacije, prva stranica koju ćete vidjeti je stranica za reg
 
 * **Prijava postojećeg korisnika:**
     Nakon uspješne registracije, automatski ćete biti preusmjereni na stranicu za prijavu. Također, možete se prijaviti s već postojećim računom. Koristite svoj email i lozinku koju ste kreirali.
-    ![Stranica za prijavu](images/login.png)
 
 ### 2. Početna Stranica (Dashboard)
 
