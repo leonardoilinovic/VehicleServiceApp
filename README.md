@@ -147,10 +147,114 @@ Ova metoda zahtijeva da imate Node.js, npm i .NET SDK instalirane na vašem rač
     * U svakom terminalu gdje se nešto pokreće (backend, frontend), pritisnite `Ctrl + C` da zaustavite proces.
     * Kada završite, možete zaustaviti i Docker kontejner za bazu podataka:
         ```bash
-        cd /putanja/do/NazivVašegProjektnogFoldera
+        cd /putanja/do/VehicleServiceApp
         docker-compose down db
         ```
         (Ponovno, ne koristite `-v` ako želite zadržati podatke u bazi.)
+
+---
+
+## 🌟 Korištenje Aplikacije - Detaljne Upute
+
+Ovaj dio README-a pruža korak-po-korak upute za interakciju s aplikacijom nakon što je uspješno pokrenuta.
+
+### 1. Registracija i Prijava
+
+Nakon pokretanja aplikacije, prva stranica koju ćete vidjeti je stranica za registraciju.
+
+* **Registracija novog korisnika:**
+    Unesite tražene podatke za registraciju novog korisnika. Lozinka mora sadržavati **minimalno 6 znakova, barem jedno veliko slovo, jedno malo slovo i barem jedan poseban znak** (npr. `@`, `#`, `!`).
+    ![Stranica za registraciju](images/registracija.png)
+
+* **Prijava postojećeg korisnika:**
+    Nakon uspješne registracije, automatski ćete biti preusmjereni na stranicu za prijavu. Također, možete se prijaviti s već postojećim računom. Koristite svoj email i lozinku koju ste kreirali.
+    ![Stranica za prijavu](images/login.png)
+
+### 2. Početna Stranica (Dashboard)
+
+Nakon uspješne prijave, bit ćete preusmjereni na početnu stranicu aplikacije. Ovdje se nalazi centralni navigacijski sustav s karticama za brzi pristup ključnim funkcionalnostima kao što su Novi Servis, Kalendar Servisa, Vozila, Klijenti, Servisni Zadatci i Svi Servisi. Iste funkcionalnosti su dostupne i putem navigacijske trake (navbar) na vrhu stranice.
+
+![Početna stranica aplikacije](images/home_page.png)
+
+### 3. Upravljanje Servisnim Zadatcima (Taskovima)
+
+Prije nego što započnete s kreiranjem servisa, preporučuje se da dodate nekoliko servisnih zadataka (npr. "Zamjena ulja", "Mijenjanje guma", "Balansiranje") s pripadajućim cijenama. Ovi zadatci će biti dostupni za odabir prilikom kreiranja novog servisa.
+
+* **Pristup stranici za servisne zadatke:**
+    Kliknite na karticu "Servisni zadatci" na početnoj stranici ili odaberite "Servisni zadatci" iz navigacijske trake.
+    ![Klik na karticu Servisni zadatci](images/klik_na_taskove.png)
+
+* **Dodavanje novog servisnog zadatka:**
+    Na ovoj stranici možete unijeti naziv novog servisnog zadatka i njegovu cijenu.
+    ![Stranica za dodavanje servisnih zadataka](images/dodavanje_taskova.png)
+
+### 4. Kreiranje Novog Servisa
+
+Za zakazivanje novog servisa, kliknite na karticu "Novi Servis" na početnoj stranici.
+
+* **Pristup formi za novi servis:**
+    ![Klik na karticu Novi Servis](images/klik_na_novi_servis.png)
+
+* **Popunjavanje detalja servisa:**
+    Na Service Dashboardu možete:
+    * Odabrati postojećeg klijenta ili dodati novog.
+    * Odabrati postojeće vozilo povezano s klijentom ili dodati novo vozilo za odabranog klijenta.
+    * Odabrati jedan ili više servisnih zadataka (taskova) koje ste prethodno definirali.
+    * Odrediti datum i vrijeme servisa putem kalendara.
+    ![Service Dashboard - Dodavanje podataka i termin u kalendar](images/service_dashboard.png)
+    ![Dodavanje termina u kalendar](images/dodavanje_u_kalendar.png)
+
+### 5. Pregled Kalendara Servisa
+
+Kalendar pruža vizualni pregled svih zakazanih servisa.
+
+* **Pristup kalendaru:**
+    Kliknite na karticu "Kalendar servisa" na početnoj stranici.
+    ![Klik na karticu Kalendar servisa](images/klik_na_kalendar.png)
+
+* **Pregled zakazanih termina:**
+    Na kalendaru su prikazani svi vaši zakazani servisi s njihovim terminima.
+    ![Prikaz Kalendara s terminima](images/kalendar.png)
+
+### 6. Upravljanje Vozilima
+
+Pregledajte, uredite ili izbrišite vozila.
+
+* **Pristup listi vozila:**
+    Kliknite na karticu "Vozila" na početnoj stranici.
+    ![Klik na karticu Vozila](images/klik_na_listu_vozila.png)
+
+* **Pregled detalja vozila:**
+    Svi dodani automobili će biti prikazani. Kliknite na određeno vozilo na listi kako biste otvorili njegove detalje.
+    ![Lista vozila i označavanje vozila za detalje](images/klik_na_vozilo.png)
+
+* **Detalji vozila i opcije:**
+    Na stranici s detaljima vozila možete vidjeti sve povezane servise i njihove termine. Također, imate opciju uređivanja ili brisanja vozila.
+    ![Detalji vozila s opcijama uređivanja/brisanja i povezanim servisima](images/detalji_vozila.png)
+
+### 7. Upravljanje Klijentima
+
+Pregledajte, uredite ili izbrišite klijente.
+
+* **Pristup listi klijenata:**
+    Kliknite na karticu "Klijenti" na početnoj stranici.
+    ![Klik na karticu Klijenti](images/klijent_na_klijente.png)
+
+* **Detalji klijenta i opcije:**
+    Na stranici s detaljima klijenta možete pregledati njegove podatke te imate opciju uređivanja ili brisanja klijenta.
+    ![Detalji klijenta s opcijama uređivanja/brisanja](images/detalji_klijenti.png)
+
+### 8. Pregled Svih Servisa
+
+Ova sekcija prikazuje sve kreirane servisne zapise u obliku liste.
+
+* **Pristup listi svih servisa:**
+    Kliknite na karticu "Svi Servisi" na početnoj stranici.
+    ![Klik na karticu Svi Servisi](images/klik_na_servise.png)
+
+* **Pregled i upravljanje servisima:**
+    Ovdje možete vidjeti sve servisne zapise, koji su automobili povezani s kojim servisom, te njihove zakazane termine. Također imate opciju brisanja pojedinog servisnog zapisa.
+    ![Lista svih servisa](images/servisi.png)
 
 ---
 
